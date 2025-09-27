@@ -1,10 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import { MiPrimerEstado } from './components/MiPrimerEstado';
+import EjercicioComponent from './components/EjercicioComponent';
 
 //Un hook es una funcion que permite enganchar el estado de react y te permite trabajar con el siclo de vida del componenete
 
 function App() {
+
+  const fecha = new Date()
+  const yearActual = fecha.getFullYear()
+
   return (
     <div className="App">
       <header className="App-header">
@@ -12,6 +17,7 @@ function App() {
 
         <h1>El estado en React - Hook useState</h1>
         <MiPrimerEstado />
+        <EjercicioComponent year={yearActual} />
       </header>
     </div>
   );
